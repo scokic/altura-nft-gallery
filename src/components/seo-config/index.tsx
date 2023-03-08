@@ -15,6 +15,7 @@ const SeoConfig = ({ title, description }: Props) => {
   return (
     <Head>
       <title>{config.title}</title>
+      <link rel="icon" href="/favicon.ico" />
       <meta name="description" content={config.description} />
     </Head>
   );
