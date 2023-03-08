@@ -31,7 +31,6 @@ Every merge/PR to main branch triggers redeploy.
 
 ## Room for improvements
 
-- Simplifying data fetching -
-- Making modal easier to use -
-- Remapping the data into our prefered data type -
--
+- Simplifying data fetching
+- Making modal more reusable by using portal and simplifying the logic
+- Remapping the data into our prefered data type
