@@ -10,12 +10,11 @@ export const useNfts = () => {
 
   const getNfts = async () => {
     if (!walletAddress) return;
-
     const data = await alchemy.nft.getNftsForOwner(walletAddress);
     return data;
   };
 
-  const { data, isLoading, error, isError } = useQuery<
+  const { data, isFetching, isSuccess, error, isError, refetch } = useQuery<
     OwnedNftsResponse | undefined,
     Error,
     OwnedNftsResponse | undefined,
@@ -25,5 +24,5 @@ export const useNfts = () => {
     refetchOnWindowFocus: false,
   });
 
-  return { data, isLoading, error, isError, setWalletAddress, walletAddress };
+  return { data, isFetching, isSuccess, error, isError, setWalletAddress, walletAddress, refetch };
 };
