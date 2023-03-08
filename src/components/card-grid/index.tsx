@@ -20,7 +20,9 @@ const CardGrid = ({ nfts, loading }: Props) => {
     <div>
       <h2 className="text-white">Owned NFTs</h2>
       <div className="grid place-items-center grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
-        {nfts.map((nft) => (console.log(nft), (<NftCard nft={nft} key={nft.contract.address + nft.tokenId} />)))}
+        {nfts.map((nft) => (
+          <NftCard nft={nft} key={nft.contract.address + nft.tokenId} />
+        ))}
       </div>
     </div>
   );
