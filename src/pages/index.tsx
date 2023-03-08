@@ -10,7 +10,7 @@ const Home = () => {
         <title>Altura NFT</title>
         <meta name="description" content="Created by gamers all around the world" />
       </Head>
-      <h1>Hello Altura</h1>
+      <h1 className="text-lg font-bold">Hello Altura</h1>
       <button onClick={() => getNfts("0x74beEE74A44b713487D42473784b5CBDc547355E")}>Fetch NFTs</button>
 
       {nfts && (
