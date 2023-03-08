@@ -8,11 +8,7 @@ type Props = {
 
 const Button = ({ label, onClick, type = "button" }: Props) => {
   return (
-    <button
-      onClick={onClick}
-      type={type}
-      className="px-4 py-2 border inline-block border-blue-600 cursor-pointer rounded"
-    >
+    <button onClick={onClick} type={type} className="px-4 py-2 inline-block cursor-pointer rounded text-white">
       {label}
     </button>
   );

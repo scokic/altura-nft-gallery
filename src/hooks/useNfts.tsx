@@ -15,10 +15,15 @@ export const useNfts = () => {
     return data;
   };
 
-  const { data, isLoading, refetch } = useQuery("nfts", getNfts, {
+  const { data, isLoading, error, isError } = useQuery<
+    OwnedNftsResponse | undefined,
+    Error,
+    OwnedNftsResponse | undefined,
+    "nfts"
+  >("nfts", getNfts, {
     enabled: walletAddress !== "",
     refetchOnWindowFocus: false,
   });
 
-  return { data, isLoading, refetch, setWalletAddress, walletAddress };
+  return { data, isLoading, error, isError, setWalletAddress, walletAddress };
 };
