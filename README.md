@@ -43,3 +43,4 @@ Every merge/PR to main branch triggers redeploy.
 - Remapping the data into our prefered data type
 - Thinking of a solution to use different media for NFT's (currently using thumbnails)
 - Input field validation can be improved, currently we're only checking if input is empty
+- We can disable page scroll on mobile when modal is opened. This can be done via simple custom hook

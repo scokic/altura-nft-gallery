@@ -15,7 +15,7 @@ const CardInfo = ({ nft }: Props) => {
   const nftImage = defineImage(nft);
 
   return (
-    <div className="w-[60vw] h-[80vh] bg-gray-900 z-10 grid grid-cols-1 md:grid-cols-2 rounded-2xl overflow-hidden relative">
+    <div className="w-[80vw] h-[80vh] md:w-[60vw] overflow-y-scroll bg-gray-900 z-10 grid grid-cols-1 md:grid-cols-2 rounded-2xl overflow-hidden relative">
       <div className="grid place-items-center p-8">
         <Image
           src={nftImage}
@@ -26,9 +26,9 @@ const CardInfo = ({ nft }: Props) => {
         />
       </div>
 
-      <div className="flex flex-col gap-4 px-8 py-20">
+      <div className="flex flex-col gap-4 px-8 md:py-20">
         <span className="text-4xl text-white">{nft.rawMetadata?.name}</span>
-        <span className="text-md text-gray-400">Contract address: {nft.contract.address}</span>
+        <span className="text-md text-gray-400 line-clamp-2">Contract address: {nft.contract.address}</span>
         <span className="text-md text-gray-400">Token ID: {nft.tokenId}</span>
         <span className="text-md text-gray-400">{nft.description}</span>
 
