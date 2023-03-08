@@ -12,6 +12,13 @@ Simply enter wallet address and press enter!
 3. Create `.env.local` file with the variable called `ALCHEMY_API_KEY=$YOUR_ALCHEMY_API_KEY`
 4. Run `npm run dev` and open `localhost:3000` in your browser
 
+### Wallets used for testing
+
+- 0x12102797AaFBe6ea5F24b7b1728849191c9b05da - 24 nft's
+- 0x135FB3c7e03F51d29C895a3793c7bD1C01Dd6837 - 64 nft's
+- 0x586887754C9967Db778a377a05dD46F6e3190E9f - 0 minted NFT's (no results)
+- test - any string can be used for forcing error (3 times retrying)
+
 ## Stack
 
 I checked out your website [alturanft.com](https://www.alturanft.com/) and saw that you are using NextJS and TailwindCSS so those are the technologies I used for my project. Next is great for SEO and websites where we need SSR, which is why it's a great choice for this type of app.
@@ -34,3 +41,5 @@ Every merge/PR to main branch triggers redeploy.
 - Simplifying data fetching
 - Making modal more reusable by using portal and simplifying the logic
 - Remapping the data into our prefered data type
+- Thinking of a solution to use different media for NFT's (currently using thumbnails)
+- Input field validation can be improved, currently we're only checking if input is empty
